@@ -17,4 +17,4 @@
         f();
     }
 
-})(document, window, "inTargetInit");
+})(document, window, "getSaleInit");
