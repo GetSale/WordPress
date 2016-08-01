@@ -10,7 +10,7 @@
         };
     s.type = "text/javascript";
     s.async = true;
-    s.src = "//rt.edge.getsale.io/loader.js"; //http://edge.getsale.io/
+    s.src = "//rt.edge.getsale.io/loader.js";
     if (w.opera == "[object Opera]") {
         d.addEventListener("DOMContentLoaded", f, false);
     } else {
