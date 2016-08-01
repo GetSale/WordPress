@@ -7,6 +7,13 @@ jQuery(document).ready(function () {
     jQuery('#getsale_id').parent().parent().hide();
     jQuery('#getsale_reg_error').parent().parent().hide();
     jQuery('input[name=submit_btn]').attr('value', 'Авторизация');
+
+    jQuery('#getsale_api_key, #getsale_email').each(function () {
+        if (jQuery(this).val() == '') {
+            jQuery('input[name=submit_btn]').attr('disabled', 'disabled');
+        }
+    });
+
     jQuery('#getsale_api_key, #getsale_email').keyup(function () {
         var empty = false;
         jQuery('#getsale_api_key, #getsale_email').each(function () {
@@ -37,8 +44,8 @@ jQuery(document).ready(function () {
     }
     if ((jQuery(app_key_selector).val() !== '') && (jQuery(email_selector).val() !== '')) {
         if (window.getsale_succes_reg == true) {
-            jQuery(app_key_selector).after('<img title="Введен правильный Ключ API!" class="gtsl_ok" src="' + images_path + 'ok.png">');
-            jQuery(email_selector).after('<img title="Введен правильный Email!" class="gtsl_ok" src="' + images_path + 'ok.png">');
+            jQuery(app_key_selector).after('<img title="Введен правильный Ключ API!" class="intrg_ok" src="' + images_path + 'ok.png">');
+            jQuery(email_selector).after('<img title="Введен правильный Email!" class="intrg_ok" src="' + images_path + 'ok.png">');
             jQuery(app_key_selector).attr('disabled', 'disabled');
             jQuery(email_selector).attr('disabled', 'disabled');
             jQuery('[name=submit_btn]').before('<br>' + success_text + support_text);
@@ -53,12 +60,12 @@ jQuery(document).ready(function () {
             } else if (window.getsale_reg_error == 404) {
                 var error_text = '<div class="error"><p>Ошибка! Данный Email не зарегистрирован на сайте <a href="http://getsale.io">getSale.io</a></p></div>';
             }
-            var gtsl_btn_html = '<div style="width:100%;margin-top: 5px;">' +
+            var intrg_btn_html = '<div style="width:100%;margin-top: 5px;">' +
                 '<div style="padding-top: 7px;">' + error_text +
                 '</span>' +
                 '</div>' +
                 '</div>';
-            jQuery('input[name=submit_btn]').after(gtsl_btn_html);
+            jQuery('input[name=submit_btn]').after(intrg_btn_html);
             jQuery('input[name=submit_btn]').css('float', 'left');
         }
         else {
