@@ -11,7 +11,7 @@ class getsaleSettingsPage {
     }
 
     public function add_plugin_page() {
-        add_options_page('Settings Admin', 'getSale', 'manage_options', $this->settings_page_name, array($this, 'create_admin_page'));
+        add_options_page('Settings Admin', 'getsale', 'manage_options', $this->settings_page_name, array($this, 'create_admin_page'));
     }
 
     public function create_admin_page() {
@@ -30,9 +30,9 @@ class getsaleSettingsPage {
             <div id="wrapper">
                 <form id="settings_form" method="post"
                       action="<?php echo $_SERVER['REQUEST_URI'] ?>">
-                    <h1>Плагин getSale</h1>
+                    <h1>Плагин getsale eCommerce</h1>
                     <?php
-                    getsale_before_text();
+                    echo_before_text();
                     settings_fields('getsale_option_group');
                     do_settings_sections('getsale_settings');
                     ?>
@@ -55,23 +55,19 @@ class getsaleSettingsPage {
 
         add_settings_field('getsale_reg_error', 'getsale_reg_error', array($this, 'getsale_reg_error_callback'), $this->settings_page_name, 'setting_section_id');
 
-        add_settings_field('getsale_id', 'getsale_id', array($this, 'getsale_id_callback'), $this->settings_page_name, 'setting_section_id');
+        add_settings_field('getsale_project_id', 'getsale_project_id', array($this, 'getsale_project_id_callback'), $this->settings_page_name, 'setting_section_id');
     }
 
     public function sanitize($input) {
         $new_input = array();
 
-        if (isset($input['getsale_email']))
-            $new_input['getsale_email'] = $input['getsale_email'];
+        if (isset($input['getsale_email'])) $new_input['getsale_email'] = $input['getsale_email'];
 
-        if (isset($input['getsale_id']))
-            $new_input['getsale_id'] = $input['getsale_id'];
+        if (isset($input['getsale_project_id'])) $new_input['getsale_project_id'] = $input['getsale_project_id'];
 
-        if (isset($input['getsale_api_key']))
-            $new_input['getsale_api_key'] = $input['getsale_api_key'];
+        if (isset($input['getsale_api_key'])) $new_input['getsale_api_key'] = $input['getsale_api_key'];
 
-        if (isset($input['getsale_reg_error']))
-            $new_input['getsale_reg_error'] = $input['getsale_reg_error'];
+        if (isset($input['getsale_reg_error'])) $new_input['getsale_reg_error'] = $input['getsale_reg_error'];
 
         return $new_input;
     }
@@ -80,7 +76,7 @@ class getsaleSettingsPage {
     }
 
     public function getsale_email_callback() {
-        printf('<input type="text" id="getsale_email" name="getsale_option_name[getsale_email]" value="%s" title="Введите в данном поле email, указанный при регистрации на сайте http://getsale.io"/>', isset($this->options['getsale_email']) ? esc_attr($this->options['getsale_email']) : '');
+        printf('<input type="text" id="getsale_email" name="getsale_option_name[getsale_email]" value="%s" title="Введите в данном поле Email, указанный при регистрации на сайте http://getsale.io"/>', isset($this->options['getsale_email']) ? esc_attr($this->options['getsale_email']) : '');
     }
 
     public function getsale_api_key_callback() {
@@ -91,20 +87,20 @@ class getsaleSettingsPage {
         printf('<input type="text" id="getsale_reg_error" name="getsale_option_name[getsale_reg_error]" value="%s" />', isset($this->options['getsale_reg_error']) ? esc_attr($this->options['getsale_reg_error']) : '');
     }
 
-    public function getsale_id_callback() {
-        printf('<input type="text" id="getsale_id" name="getsale_option_name[getsale_id]" value="%s" />', isset($this->options['getsale_id']) ? esc_attr($this->options['getsale_id']) : '');
+    public function getsale_project_id_callback() {
+        printf('<input type="text" id="getsale_project_id" name="getsale_option_name[getsale_project_id]" value="%s" />', isset($this->options['getsale_project_id']) ? esc_attr($this->options['getsale_project_id']) : '');
     }
 }
 
-function getsale_before_text() {
+function echo_before_text() {
     echo '<div id="before_install" style="display:none;">
-Плагин getSale успешно установлен!<br/>
-Для начала работы плагина необходимо ввести Ключ API, полученный в личном кабинете на сайте <a href="http://getsale.io">getSale.io</a>
+Плагин Getsale успешно установлен!<br/>
+Для начала работы плагина необходимо ввести Ключ API, полученный в личном кабинете на сайте <a href="http://getsale.io">GetSale.io</a>
 </div>
 <div class="wrap" id="after_install" style="display:none;">
-    <p><b>getSale</b> — профессиональный инструмент для создания popup-окон.</p>
-    <p>Оцените принципиально новый подход к созданию popup-окон!</p>
-    </div>
+<p><b>GetSale</b> — профессиональный инструмент для создания popup-окон.</p>
+<p>GetSale поможет вашему сайту нарастить контактную базу лояльных клиентов, информировать посетителей о предстоящих акциях, распродажах, раздавать промокоды, скидки и многое другое, что напрямую повлияет на конверсии покупателей и рост продаж.</p>
+</div>
 </div>
 <script type="text/javascript">
     window.onload = function ()
@@ -113,28 +109,18 @@ function getsale_before_text() {
             document.getElementById("before_install").style.display = "block"
         } else document.getElementById("after_install").style.display = "block"
     }
-</script>
-';
+</script>';
 }
 
-function getsale_register($regDomain, $email, $key, $url) {
+function regbyApi($regDomain, $email, $key, $url) {
     $domain = $regDomain;
     if (($domain == '') OR ($email == '') OR ($key == '') OR ($url == '')) {
         return;
     }
     $ch = curl_init();
-    $jsondata = json_encode(array(
-        'email' => $email,
-        'key' => $key,
-        'url' => $url,
-        'cms' => 'wordpress')
-    );
+    $jsondata = json_encode(array('email' => $email, 'key' => $key, 'url' => $url, 'cms' => 'wordpress'));
 
-    $options = array(
-        CURLOPT_HTTPHEADER => array('Content-Type:application/json', 'Accept: application/json'),
-        CURLOPT_URL => $domain . "/api/registration.json", CURLOPT_POST => 1,
-        CURLOPT_POSTFIELDS => $jsondata,
-        CURLOPT_RETURNTRANSFER => true);
+    $options = array(CURLOPT_HTTPHEADER => array('Content-Type:application/json', 'Accept: application/json'), CURLOPT_URL => $domain . "/api/registration.json", CURLOPT_POST => 1, CURLOPT_POSTFIELDS => $jsondata, CURLOPT_RETURNTRANSFER => true,);
 
     curl_setopt_array($ch, $options);
     $json_result = json_decode(curl_exec($ch));
@@ -149,11 +135,29 @@ function getsale_register($regDomain, $email, $key, $url) {
 
 function getsale_scripts_method() {
     $options = get_option('getsale_option_name');
-    if ($options['getsale_id'] !== '') {
-        wp_register_script('getsale_handle', '/wp-content/plugins/getsale/js/main.js', array('jquery'));
-        $datatoBePassed = array('getsale_id' => $options['getsale_id']);
+    if ($options['getsale_project_id'] !== '') {
+        wp_register_script('getsale_handle', plugins_url('js/main.js', dirname(__FILE__)), array('jquery'));
+
+        $datatoBePassed = array('project_id' => $options['getsale_project_id']);
         wp_localize_script('getsale_handle', 'getsale_vars', $datatoBePassed);
+
         wp_enqueue_script('getsale_handle');
+    }
+}
+
+function getsale_scripts_add() {
+    $options = get_option('getsale_option_name');
+    if ($options['getsale_project_id'] !== '') {
+        wp_register_script('getsale_add', plugins_url('js/add.js', dirname(__FILE__)), array('jquery'));
+        wp_enqueue_script('getsale_add');
+    }
+}
+
+function getsale_scripts_del() {
+    $options = get_option('getsale_option_name');
+    if ($options['getsale_project_id'] !== '') {
+        wp_register_script('getsale_add', plugins_url('js/del.js', dirname(__FILE__)), array('jquery'));
+        wp_enqueue_script('getsale_add');
     }
 }
 
@@ -163,7 +167,7 @@ function getsale_set_default_code() {
         $options = array();
         $options['getsale_email'] = '';
         $options['getsale_api_key'] = '';
-        $options['getsale_id'] = '';
+        $options['getsale_project_id'] = '';
         $options['getsale_reg_error'] = '';
         update_option('getsale_option_name', $options);
     }
