@@ -32,7 +32,7 @@ class getsaleSettingsPage {
                       action="<?php echo $_SERVER['REQUEST_URI'] ?>">
                     <h1>Плагин getsale eCommerce</h1>
                     <?php
-                    echo_before_text();
+                    getsale_echo_before_text();
                     settings_fields('getsale_option_group');
                     do_settings_sections('getsale_settings');
                     ?>
@@ -92,7 +92,7 @@ class getsaleSettingsPage {
     }
 }
 
-function echo_before_text() {
+function getsale_echo_before_text() {
     echo '<div id="before_install" style="display:none;">
 Плагин Getsale успешно установлен!<br/>
 Для начала работы плагина необходимо ввести Ключ API, полученный в личном кабинете на сайте <a href="http://getsale.io">GetSale.io</a>
@@ -103,11 +103,10 @@ function echo_before_text() {
 </div>
 </div>
 <script type="text/javascript">
-    window.onload = function ()
-    {
+    window.onload = function () {
         if (document.location.search == "?option=com_installer&view=install") {
-            document.getElementById("before_install").style.display = "block"
-        } else document.getElementById("after_install").style.display = "block"
+            document.getElementById("before_install").style.display = "block";
+        } else document.getElementById("after_install").style.display = "block";
     }
 </script>';
 }
