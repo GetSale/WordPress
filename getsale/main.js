@@ -35,7 +35,7 @@ jQuery(document).ready(function () {
     var support_text = "<p>Служба поддержки: <a href='mailto:support@getsale.io'>support@getsale.io</a></p>" +
         "<p>WordPress GetSale v1.0.0</p>";
     var success_text = "<div class='updated'><p>Поздравляем! Ваш сайт успешно привязан к аккаунту <a href='http://getsale.io'>GetSale</a></p></div>" +
-        "Войдите в личный кабинет <a href='http://getsale.io'>GetSale</a> для просмотра статистики.";
+        "Теперь вы можете создать виджеты в личном кабинете на <a href='http://getsale.io'>http://getsale.io</a>.";
     if ((!jQuery('#getsale_reg_error').val()) && (jQuery('#getsale_project_id').val())) {
         window.getsale_succes_reg = true;
     } else {
