@@ -77,7 +77,7 @@ jQuery(document).ready(function () {
     jQuery(app_key_selector).parent().css('margin-left', '70px');
     jQuery(email_selector).parent().css('margin-left', '70px');
 });
-var text_after2 = "<p><b>GetSale</b> — профессиональный инструмент для создания popup-окон.</p>" +
+var text_after2 = "<p><b>GetSale</b> &mdash; профессиональный инструмент для создания popup-окон.</p>" +
     "<p>GetSale поможет вашему сайту нарастить контактную базу лояльных клиентов, информировать посетителей о предстоящих акциях, распродажах, раздавать промокоды, скидки и многое другое, что напрямую повлияет на конверсии покупателей и рост продаж.</p>";
 jQuery('.readmore').parent().hide();
 jQuery('.info-labels').after(text_after2);

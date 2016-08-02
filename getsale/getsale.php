@@ -2,7 +2,7 @@
 /*
 Plugin Name: GetSale
 Plugin URI: http://getsale.io
-Description: GetSale — профессиональный инструмент для создания popup-окон.
+Description: GetSale &mdash; профессиональный инструмент для создания popup-окон.
 Version: 1.0.0
 Author: GetSale Team
 Author URI: http://getsale.io
