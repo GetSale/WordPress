@@ -30,7 +30,7 @@ class getsaleSettingsPage {
             <div id="wrapper">
                 <form id="settings_form" method="post"
                       action="<?php echo $_SERVER['REQUEST_URI'] ?>">
-                    <h1>Плагин getsale eCommerce</h1>
+                    <h1>Плагин GetSale</h1>
                     <?php
                     getsale_echo_before_text();
                     settings_fields('getsale_option_group');
@@ -135,7 +135,7 @@ function getsale_reg($regDomain, $email, $key, $url) {
 function getsale_scripts_method() {
     $options = get_option('getsale_option_name');
     if ($options['getsale_project_id'] !== '') {
-        wp_register_script('getsale_handle', plugins_url('js/main.js', dirname(__FILE__)), array('jquery'));
+        wp_register_script('getsale_handle', plugins_url('js/main.js', __FILE__), array('jquery'));
 
         $datatoBePassed = array('project_id' => $options['getsale_project_id']);
         wp_localize_script('getsale_handle', 'getsale_vars', $datatoBePassed);
@@ -147,7 +147,7 @@ function getsale_scripts_method() {
 function getsale_scripts_add() {
     $options = get_option('getsale_option_name');
     if ($options['getsale_project_id'] !== '') {
-        wp_register_script('getsale_add', plugins_url('js/add.js', dirname(__FILE__)), array('jquery'));
+        wp_register_script('getsale_add', plugins_url('js/add.js', __FILE__), array('jquery'));
         wp_enqueue_script('getsale_add');
     }
 }
@@ -155,7 +155,7 @@ function getsale_scripts_add() {
 function getsale_scripts_del() {
     $options = get_option('getsale_option_name');
     if ($options['getsale_project_id'] !== '') {
-        wp_register_script('getsale_add', plugins_url('js/del.js', dirname(__FILE__)), array('jquery'));
+        wp_register_script('getsale_add', plugins_url('js/del.js', __FILE__), array('jquery'));
         wp_enqueue_script('getsale_add');
     }
 }

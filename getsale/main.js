@@ -28,7 +28,7 @@ jQuery(document).ready(function () {
         }
     });
     var app_key_selector = '#getsale_api_key';
-    var images_path = '/wp-content/plugins/getsale/';
+    var getsale_images_ok = "<?php echo plugins_url('ok.png', __FILE__);?>";
     var email_selector = '#getsale_email';
     var text_after = "<br><br>Введите Email и Ключ API из личного кабинета GetSale.<br>" +
         "Если вы еще не регистрировались в сервисе GetSale это можно сделать по ссылке <a href='http://getsale.io'>GetSale</a>";
@@ -44,8 +44,8 @@ jQuery(document).ready(function () {
     }
     if ((jQuery(app_key_selector).val() !== '') && (jQuery(email_selector).val() !== '')) {
         if (window.getsale_succes_reg == true) {
-            jQuery(app_key_selector).after('<img title="Введен правильный Ключ API!" class="gtsl_ok" src="' + images_path + 'ok.png">');
-            jQuery(email_selector).after('<img title="Введен правильный Email!" class="gtsl_ok" src="' + images_path + 'ok.png">');
+            jQuery(app_key_selector).after('<img title="Введен правильный Ключ API!" class="gtsl_ok" src="' + getsale_images_ok +'">');
+            jQuery(email_selector).after('<img title="Введен правильный Email!" class="gtsl_ok" src="' + getsale_images_ok + '">');
             jQuery(app_key_selector).attr('disabled', 'disabled');
             jQuery(email_selector).attr('disabled', 'disabled');
             jQuery('[name=submit_btn]').before('<br>' + success_text + support_text);
