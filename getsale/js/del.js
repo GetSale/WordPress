@@ -1,7 +1,7 @@
 (function (w, c) {
     w[c] = w[c] || [];
-    w[c].push(function (inTarget) {
-        inTarget.event('del-from-cart');
+    w[c].push(function (getSale) {
+        getSale.event('del-from-cart');
         console.log('del-from-cart');
     });
-})(window, 'inTargetCallbacks');
+})(window, 'getSaleCallbacks');

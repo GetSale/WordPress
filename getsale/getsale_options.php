@@ -111,7 +111,7 @@ function getsale_echo_before_text() {
 </script>';
 }
 
-function regbyApi($regDomain, $email, $key, $url) {
+function getsale_reg($regDomain, $email, $key, $url) {
     $domain = $regDomain;
     if (($domain == '') OR ($email == '') OR ($key == '') OR ($url == '')) {
         return;

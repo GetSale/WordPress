@@ -66,7 +66,7 @@ if (is_admin()) {
     if (($_SERVER['REQUEST_METHOD'] == 'POST') && (isset($_REQUEST['getsale_option_name']))) {
         $options = $_REQUEST['getsale_option_name'];
         if (($options['getsale_email'] !== '') && ($options['getsale_api_key'] !== '') && ($options['getsale_project_id'] == '')) {
-            $reg_ans = regbyApi($reg_domain, $options['getsale_email'], $options['getsale_api_key'], $url);
+            $reg_ans = getsale_reg($reg_domain, $options['getsale_email'], $options['getsale_api_key'], $url);
             if (is_object($reg_ans)) {
                 if (($reg_ans->status == 'OK') && (isset($reg_ans->payload))) {
                     $getsale_options = get_option('getsale_option_name');
