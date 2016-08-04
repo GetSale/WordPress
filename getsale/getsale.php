@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: GetSale
-Plugin URI: http://getsale.io
+Plugin URI: https://getsale.io
 Description: GetSale &mdash; профессиональный инструмент для создания popup-окон.
 Version: 1.0.0
 Author: GetSale Team
-Author URI: http://getsale.io
+Author URI: https://getsale.io
 */
 
 // Creating the widget
@@ -60,7 +60,7 @@ if (is_admin()) {
         getsale_set_default_code();
     }
 
-    $reg_domain = 'http://edge.getsale.io';
+    $reg_domain = 'https://getsale.io';
     $url = get_site_url();
 
     if (($_SERVER['REQUEST_METHOD'] == 'POST') && (isset($_REQUEST['getsale_option_name']))) {

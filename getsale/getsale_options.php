@@ -76,11 +76,11 @@ class getsaleSettingsPage {
     }
 
     public function getsale_email_callback() {
-        printf('<input type="text" id="getsale_email" name="getsale_option_name[getsale_email]" value="%s" title="Введите в данном поле Email, указанный при регистрации на сайте http://getsale.io"/>', isset($this->options['getsale_email']) ? esc_attr($this->options['getsale_email']) : '');
+        printf('<input type="text" id="getsale_email" name="getsale_option_name[getsale_email]" value="%s" title="Введите в данном поле Email, указанный при регистрации на сайте https://getsale.io"/>', isset($this->options['getsale_email']) ? esc_attr($this->options['getsale_email']) : '');
     }
 
     public function getsale_api_key_callback() {
-        printf('<input type="text" id="getsale_api_key" name="getsale_option_name[getsale_api_key]" value="%s" title="Введите в данном поле Ключ API, полученный на сайте http://getsale.io" />', isset($this->options['getsale_api_key']) ? esc_attr($this->options['getsale_api_key']) : '');
+        printf('<input type="text" id="getsale_api_key" name="getsale_option_name[getsale_api_key]" value="%s" title="Введите в данном поле Ключ API, полученный на сайте https://getsale.io" />', isset($this->options['getsale_api_key']) ? esc_attr($this->options['getsale_api_key']) : '');
     }
 
     public function getsale_reg_error_callback() {
@@ -95,7 +95,7 @@ class getsaleSettingsPage {
 function getsale_echo_before_text() {
     echo '<div id="before_install" style="display:none;">
 Плагин Getsale успешно установлен!<br/>
-Для начала работы плагина необходимо ввести Ключ API, полученный в личном кабинете на сайте <a href="http://getsale.io">GetSale.io</a>
+Для начала работы плагина необходимо ввести Ключ API, полученный в личном кабинете на сайте <a href="https://getsale.io">GetSale.io</a>
 </div>
 <div class="wrap" id="after_install" style="display:none;">
 <p><b>GetSale</b> &mdash; профессиональный инструмент для создания popup-окон.</p>

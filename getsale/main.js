@@ -31,11 +31,11 @@ jQuery(document).ready(function () {
     var getsale_images_ok = "<?php echo plugins_url('ok.png', __FILE__);?>";
     var email_selector = '#getsale_email';
     var text_after = "<br><br>Введите Email и Ключ API из личного кабинета GetSale.<br>" +
-        "Если вы еще не регистрировались в сервисе GetSale это можно сделать по ссылке <a href='http://getsale.io'>GetSale</a>";
+        "Если вы еще не регистрировались в сервисе GetSale это можно сделать по ссылке <a href='https://getsale.io'>GetSale</a>";
     var support_text = "<p>Служба поддержки: <a href='mailto:support@getsale.io'>support@getsale.io</a></p>" +
         "<p>WordPress GetSale v1.0.0</p>";
-    var success_text = "<div class='updated'><p>Поздравляем! Ваш сайт успешно привязан к аккаунту <a href='http://getsale.io'>GetSale</a></p></div>" +
-        "Теперь вы можете создать виджеты в личном кабинете на <a href='http://getsale.io'>http://GetSale</a>.";
+    var success_text = "<div class='updated'><p>Поздравляем! Ваш сайт успешно привязан к аккаунту <a href='https://getsale.io'>GetSale</a></p></div>" +
+        "Теперь вы можете создать виджеты в личном кабинете на <a href='https://getsale.io'>GetSale</a>.";
     if ((!jQuery('#getsale_reg_error').val()) && (jQuery('#getsale_project_id').val())) {
         window.getsale_succes_reg = true;
     } else {
@@ -55,10 +55,10 @@ jQuery(document).ready(function () {
             if (window.getsale_reg_error == 403) {
                 var error_text = '<div class="error"><p>Ошибка! Неверно введен Email или Ключ API.</p></div>';
             } else if (window.getsale_reg_error == 500) {
-                var error_text = '<div class="error"><p>Ошибка! Данный сайт уже используется на <a href="http://getsale.io">GetSale</a></p></div>';
+                var error_text = '<div class="error"><p>Ошибка! Данный сайт уже используется на <a href="https://getsale.io">GetSale</a></p></div>';
 
             } else if (window.getsale_reg_error == 404) {
-                var error_text = '<div class="error"><p>Ошибка! Данный Email не зарегистрирован на сайте <a href="http://getsale.io">GetSale</a></p></div>';
+                var error_text = '<div class="error"><p>Ошибка! Данный Email не зарегистрирован на сайте <a href="https://getsale.io">GetSale</a></p></div>';
             }
             var gtsl_btn_html = '<div style="width:100%;margin-top: 5px;">' +
                 '<div style="padding-top: 7px;">' + error_text +
