@@ -52,7 +52,7 @@ msgstr "GetSale Popup Tool"
 
 #: ../getsale_options.php:100
 msgid "professional tool for creating popup windows"
-msgstr "ferramenta potente de ponta para criação de widgets e popusp para seu website!"
+msgstr "ferramenta potente de ponta para criação de widgets e popups para seu website!"
 
 #: ../getsale_options.php:101
 msgid "GetSale &mdash; powerful cutting edge tool to create widgets and popups for your website!"
@@ -63,7 +63,7 @@ msgid "Authorization"
 msgstr "Autorização"
 
 #: ../getsale.php:126
-msgid "Please, enter your Email and API key from your GetSale account"
+msgid "Please, enter your Email and API Key from your GetSale account"
 msgstr "Por favor, insira seu Email e a chave de API da sua conta GetSale."
 
 #: ../getsale.php:127
