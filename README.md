@@ -79,16 +79,16 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
 ##Upgrade Notice
 #1.0.1
 * Added translations:
-- Russian;
-- Português do Brasil;
-- Bahasa Indonesia.
+  Russian;
+  Português do Brasil;
+  Bahasa Indonesia.
 
 ##Changelog
 #1.0.1
 * Added translations:
-- Russian;
-- Português do Brasil;
-- Bahasa Indonesia.
+  Russian;
+  Português do Brasil;
+  Bahasa Indonesia.
 
 #1.0.0
 * Release
