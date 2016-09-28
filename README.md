@@ -68,7 +68,7 @@ GetSale will help you build a loyal customer contact base at your site, inform
 3. Install *GetSale Popup Tool* and activate it.
 4. Enter Email and API Key from your https://getsale.io account.
 
-##Frequently Asked Questions ==
+##Frequently Asked Questions
 Answers to Frequently Asked Questions you can find at http://help.getsale.io
 
 ##Screenshots
