@@ -1,0 +1,143 @@
+# Copyright (C) 2016 GetSale
+# This file is distributed under the same license as the GetSale package.
+msgid ""
+msgstr ""
+"Project-Id-Version: GetSale 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/getsale-popup-"
+"tool\n"
+"POT-Creation-Date: 2016-09-29 12:07:47+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: getsale.php:42 getsale.php:51
+msgid "Settings"
+msgstr ""
+
+#: getsale.php:125
+msgid "Authorization"
+msgstr ""
+
+#: getsale.php:126
+msgid "Please, enter your Email and API Key from your GetSale account"
+msgstr ""
+
+#: getsale.php:127
+msgid ""
+"If you don’t have GetSale account, you can register it <a href='https://"
+"getsale.io'>here</a>"
+msgstr ""
+
+#: getsale.php:128
+msgid "Contact Us: <a href='mailto:support@getsale.io'>support@getsale.io</a>"
+msgstr ""
+
+#: getsale.php:130
+msgid ""
+"Congratulations! Your website is successfully linked to your <a "
+"href='https://getsale.io'>GetSale account</a>"
+msgstr ""
+
+#: getsale.php:131
+msgid ""
+"You can start creating widgets for your website using your <a href='https://"
+"getsale.io'>GetSale account</a>!"
+msgstr ""
+
+#: getsale.php:132
+msgid "API Key is correct"
+msgstr ""
+
+#: getsale.php:133
+msgid "Email is correct"
+msgstr ""
+
+#: getsale.php:134
+msgid ""
+"Attention! API Key is invalid. Please, check and enter API Key once again"
+msgstr ""
+
+#: getsale.php:135
+msgid ""
+"Attention! This Email isn’t registered on <a href='https://getsale."
+"io'>GetSale</a>"
+msgstr ""
+
+#: getsale.php:136
+msgid ""
+"Attention! This website is already in use on <a href='https://getsale."
+"io'>GetSale</a>"
+msgstr ""
+
+#: getsale.php:137
+msgid ""
+"powerful cutting edge tool to create widgets and popups for your website!"
+msgstr ""
+
+#: getsale.php:138 getsale_options.php:98
+msgid ""
+"GetSale is a powerful tool for creating all types of widgets for your "
+"website. You can increase your sales dramatically creating special offer, "
+"callback widgets, coupons blasts and many more. Create, Show and Sell - this "
+"is our goal!"
+msgstr ""
+
+#: getsale.php:139 getsale_options.php:30 getsale_options.php:96
+msgid "GetSale Popup Tool"
+msgstr ""
+
+#: getsale_options.php:36
+msgid "Save Settings"
+msgstr ""
+
+#: getsale_options.php:49
+msgid "Email"
+msgstr ""
+
+#: getsale_options.php:51
+msgid "API Key"
+msgstr ""
+
+#: getsale_options.php:76
+msgid "Enter Email"
+msgstr ""
+
+#: getsale_options.php:80
+msgid "Enter API Key"
+msgstr ""
+
+#: getsale_options.php:93
+msgid "GetSale Popup Tool has been successfully installed"
+msgstr ""
+
+#: getsale_options.php:94
+msgid ""
+"To get started, you must enter Email and API Key, from from your <a "
+"href='https://getsale.io'>GetSale account</a>"
+msgstr ""
+
+#: getsale_options.php:97
+msgid "professional tool for creating popup windows"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "GetSale"
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (GetSale 1.0.1)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  plugin.pot (GetSale 1.0.1)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://getsale.io"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "GetSale &mdash; professional tool for creating popup windows."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "GetSale Team"
+msgstr ""
