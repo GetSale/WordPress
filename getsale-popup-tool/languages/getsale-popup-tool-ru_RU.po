@@ -64,7 +64,7 @@ msgstr "Авторизация"
 
 #: ../getsale.php:126
 msgid "Please, enter your Email and API Key from your GetSale account"
-msgstr "Введите Email и Ключ API из личного кабинета GetSale."
+msgstr "Введите Email и Ключ API из личного кабинета GetSale"
 
 #: ../getsale.php:127
 msgid "If you don’t have GetSale account, you can register it <a href='https://getsale.io'>here</a>"
