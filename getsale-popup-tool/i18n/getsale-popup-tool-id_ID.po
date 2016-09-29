@@ -64,7 +64,7 @@ msgstr "Otorisasi"
 
 #: ../getsale.php:126
 msgid "Please, enter your Email and API Key from your GetSale account"
-msgstr "Silahkan, masukan email dan API Key dari akun GetSale Anda."
+msgstr "Silahkan, masukan Email dan API Key dari akun GetSale Anda."
 
 #: ../getsale.php:127
 msgid "If you don’t have GetSale account, you can register it <a href='https://getsale.io'>here</a>"
