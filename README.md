@@ -4,14 +4,14 @@ Donate link: https://getsale.io
 Tags: getsale, popup, popups, pop-up  
 Requires at least: 3.0.1  
 Tested up to: 4.6.1  
-Stable tag: 1.0.0  
+Stable tag: 1.0.1  
 License: GNU General Public License, version 3  
 
 GetSale Popup Tool &mdash; professional tool for creating popup windows.
 
 ##Description
 
-GetSale will help you build a loyal customer contact base at your site, inform visitors about upcoming promotions, sales, distribute promotional offers, discounts and other things that directly affect the customers’ conversions and sales growth.  Beginners can get use of dozens of pre-installed designs and a professional multifunctional designer will implement virtually any design, adjusting it to the different segments of visitors and their actions.
+GetSale will help you build a loyal customer contact base at your site, inform visitors about upcoming promotions, sales, distribute promotional offers, discounts and other things that directly affect the customers’ conversions and sales growth. Beginners can get use of dozens of pre-installed designs and a professional multifunctional designer will implement virtually any design, adjusting it to the different segments of visitors and their actions.
 
 **Easy start:**
 
