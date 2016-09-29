@@ -17,7 +17,7 @@ include 'getsale_options.php';
 add_action('plugins_loaded', 'getsale_load_textdomain');
 
 function getsale_load_textdomain() {
-    load_plugin_textdomain( 'getsale-popup-tool', false, dirname( plugin_basename(__FILE__) ) . '/i18n/' );
+    load_plugin_textdomain( 'getsale-popup-tool', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
 }
 
 add_action('wp_enqueue_scripts', 'getsale_scripts_method');
