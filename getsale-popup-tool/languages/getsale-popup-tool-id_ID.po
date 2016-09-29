@@ -44,7 +44,7 @@ msgstr "GetSale Popup Tool telah berhasil diinstal"
 
 #: ../getsale_options.php:97
 msgid "To get started, you must enter Email and API Key, from from your <a href='https://getsale.io'>GetSale account</a>"
-msgstr "Untuk memulai, masukan Email dan API Key dari akun <a href='https://getsale.io'>GetSale</a>Anda."
+msgstr "Untuk memulai, masukan Email dan API Key dari akun <a href='https://getsale.io'>GetSale</a>Anda"
 
 #: ../getsale_options.php:99
 msgid "GetSale Popup Tool"
@@ -64,7 +64,7 @@ msgstr "Otorisasi"
 
 #: ../getsale.php:126
 msgid "Please, enter your Email and API Key from your GetSale account"
-msgstr "Silahkan, masukan Email dan API Key dari akun GetSale Anda."
+msgstr "Silahkan, masukan Email dan API Key dari akun GetSale Anda"
 
 #: ../getsale.php:127
 msgid "If you don’t have GetSale account, you can register it <a href='https://getsale.io'>here</a>"
@@ -104,4 +104,4 @@ msgstr "Perhatian! Situs ini telah menggunakan <a href='https://getsale.io'>GetS
 
 #: ../getsale.php:138
 msgid "GetSale is a powerful tool for creating all types of widgets for your website. You can increase your sales dramatically creating special offer, callback widgets, coupons blasts and many more. Create, Show and Sell - this is our goal!"
-msgstr "GetSale merupakan suatu alat untuk membuat segala macam widget untuk situs Anda. Anda dapat meningkatkan penjualan dengan membuat special offer, callback widget, blast kupon dan masih banyak lain nya.  Buat, tampilkan, serta Jual! Ini merupakan tujuan kami!"
+msgstr "GetSale merupakan suatu alat untuk membuat segala macam widget untuk situs Anda. Anda dapat meningkatkan penjualan dengan membuat special offer, callback widget, blast kupon dan masih banyak lain nya. Buat, tampilkan, serta Jual! Ini merupakan tujuan kami!"
