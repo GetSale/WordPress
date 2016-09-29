@@ -1,11 +1,13 @@
 <?php
 /*
-Plugin Name: GetSale
-Plugin URI: https://getsale.io
-Description: GetSale &mdash; professional tool for creating popup windows.
-Version: 1.0.1
-Author: GetSale Team
-Author URI: https://getsale.io
+* Plugin Name: GetSale
+* Plugin URI: https://getsale.io
+* Description: GetSale &mdash; professional tool for creating popup windows.
+* Version: 1.0.1
+* Author: GetSale Team
+* Author URI: https://getsale.io
+* Text Domain: getsale-popup-tool
+* Domain Path: /languages
 */
 
 $gsver = '1.0.1';
