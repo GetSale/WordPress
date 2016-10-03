@@ -17,9 +17,10 @@ class getsaleSettingsPage {
     public function create_admin_page() {
         $this->options = get_option('getsale_option_name');
 
-        if ((isset($this->options['getsale_email'])) && ('' !== $this->options['getsale_email'])) {
-            $email = $this->options['getsale_email'];
-        } else $email = get_option('admin_email');
+//ToDo вывод email админа сайта поумолчанию
+//        if ((isset($this->options['getsale_email'])) && ('' !== $this->options['getsale_email'])) {
+//            $email = $this->options['getsale_email'];
+//        } else $email = get_option('admin_email');
 
         ?>
         <div id='getsale_site_url' style='display: none'><?php echo get_site_url(); ?></div>
@@ -112,6 +113,15 @@ function getsale_reg($regDomain, $email, $key, $url) {
     if (($domain == '') OR ($email == '') OR ($key == '') OR ($url == '')) {
         return;
     }
+
+    if (!function_exists('curl_init')) {
+        $json_result = '';
+        $json_result->status = 'error';
+        $json_result->code = 0;
+        $json_result->message = 'No Curl!';
+        return $json_result;
+    };
+
     $ch = curl_init();
     $jsondata = json_encode(array(
         'email' => $email,

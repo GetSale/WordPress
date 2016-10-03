@@ -4,7 +4,7 @@ Donate link: https://getsale.io
 Tags: getsale, popup, popups, pop-up  
 Requires at least: 3.0.1  
 Tested up to: 4.6.1  
-Stable tag: 1.0.1  
+Stable tag: 1.0.2  
 License: GNU General Public License, version 3  
 
 GetSale Popup Tool &mdash; professional tool for creating popup windows.
@@ -77,6 +77,9 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
 3. Widget settings in https://getsale.io account
 
 ##Upgrade Notice
+#1.0.2
+* Added error handling "Call to undefined function curl_init()"
+
 #1.0.1
 * Added translations:
   Russian;
@@ -84,6 +87,9 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
   Bahasa Indonesia.
 
 ##Changelog
+#1.0.2
+* Added error handling "Call to undefined function curl_init()"
+
 #1.0.1
 * Added translations:
   Russian;

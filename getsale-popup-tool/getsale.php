@@ -10,7 +10,7 @@
 * Domain Path: /languages
 */
 
-$gsver = '1.0.1';
+
 
 // Creating the widget
 
@@ -128,7 +128,7 @@ function getsale_script_translate() {
         'enter_value' => __( 'Please, enter your Email and API Key from your GetSale account', 'getsale-popup-tool' ),
         'registration' => __( 'If you don’t have GetSale account, you can register it <a href=\'https://getsale.io\'>here</a>', 'getsale-popup-tool' ),
         'support' => __( 'Contact Us: <a href=\'mailto:support@getsale.io\'>support@getsale.io</a>', 'getsale-popup-tool' ),
-        'getsale_ver' => '1.0.1',
+        'getsale_ver' => '1.0.2',
         'congrats' => __( 'Congratulations! Your website is successfully linked to your <a href=\'https://getsale.io\'>GetSale account</a>', 'getsale-popup-tool' ),
         'widgets_create' => __( 'You can start creating widgets for your website using your <a href=\'https://getsale.io\'>GetSale account</a>!', 'getsale-popup-tool' ),
         'api_key_success' => __( 'API Key is correct', 'getsale-popup-tool' ),
@@ -136,6 +136,7 @@ function getsale_script_translate() {
         'error403' => __( 'Attention! API Key is invalid. Please, check and enter API Key once again', 'getsale-popup-tool' ),
         'error404' => __( 'Attention! This Email isn’t registered on <a href=\'https://getsale.io\'>GetSale</a>', 'getsale-popup-tool' ),
         'error500' => __( 'Attention! This website is already in use on <a href=\'https://getsale.io\'>GetSale</a>', 'getsale-popup-tool' ),
+        'error0' => __( 'You don\'t have Curl support in your PHP!', 'getsale-popup-tool' ),
         'desc' => __( 'powerful cutting edge tool to create widgets and popups for your website!', 'getsale-popup-tool' ),
         'description' => __( 'GetSale is a powerful tool for creating all types of widgets for your website. You can increase your sales dramatically creating special offer, callback widgets, coupons blasts and many more. Create, Show and Sell - this is our goal!', 'getsale-popup-tool' ),
         'getsale_name' => __( 'GetSale Popup Tool', 'getsale-popup-tool' ),
