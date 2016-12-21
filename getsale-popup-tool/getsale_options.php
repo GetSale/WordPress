@@ -5,16 +5,16 @@ class getsaleSettingsPage {
     public $settings_page_name = 'getsale_settings';
 
     public function __construct() {
-        add_action('admin_menu', array($this, 'add_plugin_page'));
-        add_action('admin_init', array($this, 'page_init'));
+        add_action('admin_menu', array($this, 'getsale_add_plugin_page'));
+        add_action('admin_init', array($this, 'getsale_page_init'));
         $this->options = get_option('getsale_option_name');
     }
 
-    public function add_plugin_page() {
-        add_options_page('Settings Admin', 'GetSale', 'manage_options', $this->settings_page_name, array($this, 'create_admin_page'));
+    public function getsale_add_plugin_page() {
+        add_options_page('Settings Admin', 'GetSale', 'manage_options', $this->settings_page_name, array($this, 'getsale_create_admin_page'));
     }
 
-    public function create_admin_page() {
+    public function getsale_create_admin_page() {
         $this->options = get_option('getsale_option_name');
 
 //ToDo вывод email админа сайта поумолчанию
@@ -41,8 +41,8 @@ class getsaleSettingsPage {
         <?php
     }
 
-    public function page_init() {
-        register_setting('getsale_option_group', 'getsale_option_name', array($this, 'sanitize'));
+    public function getsale_page_init() {
+        register_setting('getsale_option_group', 'getsale_option_name', array($this, 'getsale_sanitize'));
 
         add_settings_section('setting_section_id', '', // Title
             array($this, 'print_section_info'), $this->settings_page_name);
@@ -56,7 +56,7 @@ class getsaleSettingsPage {
         add_settings_field('getsale_project_id', 'getsale_project_id', array($this, 'getsale_project_id_callback'), $this->settings_page_name, 'setting_section_id');
     }
 
-    public function sanitize($input) {
+    public function getsale_sanitize($input) {
         $new_input = array();
 
         if (isset($input['getsale_email'])) $new_input['getsale_email'] = $input['getsale_email'];

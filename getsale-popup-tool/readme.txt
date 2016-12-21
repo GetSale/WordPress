@@ -3,7 +3,7 @@ Contributors: GetSale Team
 Donate link: https://getsale.io  
 Tags: getsale, popup, popups, pop-up  
 Requires at least: 3.0.1  
-Tested up to: 4.6.1  
+Tested up to: 4.7
 Stable tag: 1.0.2
 License: GNU General Public License, version 3  
 
@@ -88,7 +88,8 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
 
 == Changelog ==
 = 1.0.2 =
- - Added error handling "Call to undefined function curl_init()"
+ * Added error handling "Call to undefined function curl_init()".
+ * Улучшена совместимость с плагинами.
 
 = 1.0.1 =
 * Added translations:
