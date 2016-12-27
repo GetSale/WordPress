@@ -11,7 +11,7 @@ class getsaleSettingsPage {
     }
 
     public function getsale_add_plugin_page() {
-        add_options_page('Settings Admin', 'GetSale', 'manage_options', $this->settings_page_name, array($this, 'getsale_create_admin_page'));
+        add_options_page('GetSale Settings', 'GetSale', 'manage_options', $this->settings_page_name, array($this, 'getsale_create_admin_page'));
     }
 
     public function getsale_create_admin_page() {
@@ -21,8 +21,10 @@ class getsaleSettingsPage {
 //        if ((isset($this->options['getsale_email'])) && ('' !== $this->options['getsale_email'])) {
 //            $email = $this->options['getsale_email'];
 //        } else $email = get_option('admin_email');
-
         ?>
+        <script type="text/javascript">
+            <?php include('js/admin.js'); ?>
+        </script>
         <div id='getsale_site_url' style='display: none'><?php echo get_site_url(); ?></div>
         <div class='wrap'>
             <div id='wrapper'>
@@ -34,7 +36,7 @@ class getsaleSettingsPage {
                     settings_fields('getsale_option_group');
                     do_settings_sections('getsale_settings');
                     ?>
-                    <input type='submit' name='submit_btn' value='<?php __('Save Settings'); ?>'>
+                    <input type='submit' name='submit_btn'>
                 </form>
             </div>
         </div>

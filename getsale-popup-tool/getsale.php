@@ -1,13 +1,13 @@
 <?php
 /**
-* Plugin Name: GetSale
-* Plugin URI: https://getsale.io
-* Description: GetSale &mdash; professional tool for creating popup windows.
-* Version: 1.0.2
-* Author: GetSale Team
-* Author URI: https://getsale.io
-* Text Domain: getsale-popup-tool
-* Domain Path: /languages
+* Plugin Name:  GetSale
+* Plugin URI:   https://getsale.io
+* Description:  GetSale &mdash; professional tool for creating popup windows.
+* Version:      1.0.2
+* Author:       GetSale Team
+* Author URI:   https://getsale.io
+* Text Domain:  getsale-popup-tool
+* Domain Path:  /languages
 **/
 
 // Creating the widget
@@ -34,19 +34,24 @@ function getsale_del_from_cart() {
     setcookie('getsale_del', 'true', time() + 3600 * 24 * 100, COOKIEPATH, COOKIE_DOMAIN, false);
 }
 
+add_action('admin_menu', function () {
+    add_menu_page('GetSale Settings', 'GetSale', 'manage_options', 'getsale_settings', 'getsale_create_admin_page', plugin_dir_url(__FILE__) . '/img/logo.png', 100);
+});
+
 function getsale_plugin_action_links($actions, $plugin_file) {
-    if (false === strpos($plugin_file, basename(__FILE__))) return $actions;
-    $settings_link = '<a href="options-general.php?page=getsale_settings">'. __('Settings', 'getsale-popup-tool') .'</a>';
-    array_unshift($actions, $settings_link);
+    if(basename(dirname($plugin_file)) == 'getsale-popup-tool') {
+        $actions[] = '<a href="' . add_query_arg(array('page' => 'getsale_settings'), admin_url('plugins.php')) . '">' . __('Settings') . '</a>';
+    }
     return $actions;
 }
 
 add_filter('plugin_row_meta', 'getsale_plugin_description_links', 10, 4);
 
-function getsale_plugin_description_links($meta, $plugin_file) {
-    if (false === strpos($plugin_file, basename(__FILE__))) return $meta;
-    $meta[] = '<a href="options-general.php?page=getsale_settings">'. __('Settings', 'getsale-popup-tool') .'</a>';
-    return $meta;
+function getsale_plugin_description_links($actions, $plugin_file) {
+    if(basename(dirname($plugin_file)) == 'getsale-popup-tool') {
+        $actions[] = '<a href="' . add_query_arg(array('page' => 'getsale_settings'), admin_url('plugins.php')) . '">' . __('Settings') . '</a>';
+    }
+    return $actions;
 }
 
 add_filter('wc_add_to_cart_message', 'getsale_add_filter', 10, 4);
@@ -117,7 +122,7 @@ add_action('init', 'getsale_script_cookie');
 add_action('admin_enqueue_scripts', 'getsale_script_translate');
 
 function getsale_script_translate() {
-    wp_enqueue_script( 'getsale-main-script', dirname( plugin_basename(__FILE__) ) . 'main.js');
+    wp_enqueue_script( 'getsale-main-script', dirname( plugin_basename(__FILE__) ) . 'js/admin.js');
     wp_localize_script( 'getsale-main-script', 'gs', array(
         'authorization' => __( 'Authorization', 'getsale-popup-tool' ),
         'enter_value' => __( 'Please, enter your Email and API Key from your GetSale account', 'getsale-popup-tool'),

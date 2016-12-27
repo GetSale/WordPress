@@ -78,7 +78,10 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
 
 == Upgrade Notice ==
 = 1.0.2 =
- - Added error handling "Call to undefined function curl_init()"
+ * Added error handling "Call to undefined function curl_init()".
+ * Added settings page in the admin sidebar.
+ * Improved compatibility with other plugins.
+
 
 = 1.0.1 =
 * Added translations:
@@ -89,7 +92,8 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
 == Changelog ==
 = 1.0.2 =
  * Added error handling "Call to undefined function curl_init()".
- * Улучшена совместимость с плагинами.
+ * Added settings page in the admin sidebar.
+ * Improved compatibility with other plugins.
 
 = 1.0.1 =
 * Added translations:
