@@ -76,22 +76,11 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
 2. Widget list in https://getsale.io account
 3. Widget settings in https://getsale.io account
 
-##Upgrade Notice
+##Changelog
 #1.0.2
 * Added error handling "Call to undefined function curl_init()".
 * Added settings page in the admin sidebar.
 * Improved compatibility with other plugins.
-
-#1.0.1
-* Added translations:
-  Russian;
-  Português do Brasil;
-  Bahasa Indonesia.
-
-##Changelog
-#1.0.2
-* Added error handling "Call to undefined function curl_init()"
-* Улучшена совместимость с плагинами.
 
 #1.0.1
 * Added translations:
