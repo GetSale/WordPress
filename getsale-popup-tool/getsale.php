@@ -4,6 +4,8 @@
 * Plugin URI:   https://getsale.io
 * Description:  GetSale &mdash; professional tool for creating popup windows.
 * Version:      1.0.2
+* Requires at least: 4.1
+* Tested up to: 4.7
 * Author:       GetSale Team
 * Author URI:   https://getsale.io
 * Text Domain:  getsale-popup-tool
@@ -34,12 +36,8 @@ function getsale_del_from_cart() {
     setcookie('getsale_del', 'true', time() + 3600 * 24 * 100, COOKIEPATH, COOKIE_DOMAIN, false);
 }
 
-add_action('admin_menu', function () {
-    add_menu_page('GetSale Settings', 'GetSale', 'manage_options', 'getsale_settings', 'getsale_create_admin_page', plugin_dir_url(__FILE__) . '/img/logo.png', 100);
-});
-
 function getsale_plugin_action_links($actions, $plugin_file) {
-    if(basename(dirname($plugin_file)) == 'getsale-popup-tool') {
+    if (!(strpos($plugin_file, basename(__FILE__)) === false)) {
         $actions[] = '<a href="' . add_query_arg(array('page' => 'getsale_settings'), admin_url('plugins.php')) . '">' . __('Settings') . '</a>';
     }
     return $actions;
@@ -48,7 +46,7 @@ function getsale_plugin_action_links($actions, $plugin_file) {
 add_filter('plugin_row_meta', 'getsale_plugin_description_links', 10, 4);
 
 function getsale_plugin_description_links($actions, $plugin_file) {
-    if(basename(dirname($plugin_file)) == 'getsale-popup-tool') {
+    if (!(strpos($plugin_file, basename(__FILE__)) === false)) {
         $actions[] = '<a href="' . add_query_arg(array('page' => 'getsale_settings'), admin_url('plugins.php')) . '">' . __('Settings') . '</a>';
     }
     return $actions;

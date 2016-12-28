@@ -28,8 +28,7 @@ class getsaleSettingsPage {
         <div id='getsale_site_url' style='display: none'><?php echo get_site_url(); ?></div>
         <div class='wrap'>
             <div id='wrapper'>
-                <form id='settings_form' method='post'
-                      action='<?php echo $_SERVER['REQUEST_URI'] ?>'>
+                <form id='settings_form' method='post' action='options.php'>
                     <h1><?php _e('GetSale Popup Tool');?></h1>
                     <?php
                     getsale_echo_before_text();
@@ -47,7 +46,7 @@ class getsaleSettingsPage {
         register_setting('getsale_option_group', 'getsale_option_name', array($this, 'getsale_sanitize'));
 
         add_settings_section('setting_section_id', '', // Title
-            array($this, 'print_section_info'), $this->settings_page_name);
+            array($this, 'getsale_print_section_info'), $this->settings_page_name);
 
         add_settings_field('email', __('Email', 'getsale-popup-tool'), array($this, 'getsale_email_callback'), $this->settings_page_name, 'setting_section_id');
 
@@ -72,7 +71,7 @@ class getsaleSettingsPage {
         return $new_input;
     }
 
-    public function print_section_info() {
+    public function getsale_print_section_info() {
     }
 
     public function getsale_email_callback() {
@@ -188,5 +187,27 @@ function getsale_set_default_code() {
         $options['getsale_project_id'] = '';
         $options['getsale_reg_error'] = '';
         update_option('getsale_option_name', $options);
+    }
+}
+
+register_activation_hook(__FILE__, 'getsale_admin_actions');
+
+add_action('admin_menu', 'getsale_admin_actions');
+
+function getsale_admin_actions() {
+    if (current_user_can('manage_options')) {
+        if (function_exists('add_meta_box')) {
+            add_menu_page('GetSale Settings', 'GetSale', 'manage_options', 'getsale_settings', 'getsale_custom_menu_page', plugin_dir_url(__FILE__) . '/img/logo.png', 100);
+        }
+    }
+}
+
+function getsale_custom_menu_page() {
+    $getsale_settings_page = new getsaleSettingsPage();
+    if (!isset($getsale_settings_page)) {
+        wp_die(__('Plugin GetSale has been installed incorrectly.'));
+    }
+    if (function_exists('add_plugins_page')) {
+        add_plugins_page('GetSale Settings', 'GetSale', 'manage_options', 'getsale_settings', array(&$getsale_settings_page, 'getsale_create_admin_page'));
     }
 }
