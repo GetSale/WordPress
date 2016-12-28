@@ -191,6 +191,11 @@ function getsale_set_default_code() {
 }
 
 register_activation_hook(__FILE__, 'getsale_admin_actions');
+register_uninstall_hook( __FILE__, 'getsale_plugin_uninstall');
+
+function getsale_plugin_uninstall(){
+    delete_option('getsale_option_name');
+}
 
 add_action('admin_menu', 'getsale_admin_actions');
 
