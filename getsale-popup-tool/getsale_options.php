@@ -125,7 +125,7 @@ function getsale_reg($regDomain, $email, $key, $url) {
 
     $ch = curl_init();
     $jsondata = json_encode(array(
-        'email' => $email,
+        'email' => trim($email),
         'key' => $key,
         'url' => $url,
         'cms' => 'wordpress'
