@@ -190,8 +190,6 @@ function getsale_set_default_code() {
     }
 }
 
-register_activation_hook(__FILE__, 'getsale_admin_actions');
-
 add_action('admin_menu', 'getsale_admin_actions');
 
 function getsale_admin_actions() {
