@@ -80,6 +80,7 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
 = 1.0.2 =
  * Added error handling "Call to undefined function curl_init()".
  * Added settings page in the admin sidebar.
+ * Added trimming of email and APIkey fields.
  * Improved compatibility with other plugins.
 
 
@@ -93,6 +94,7 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
 = 1.0.2 =
  * Added error handling "Call to undefined function curl_init()".
  * Added settings page in the admin sidebar.
+ * Added trimming of email and APIkey fields.
  * Improved compatibility with other plugins.
 
 = 1.0.1 =

@@ -60,11 +60,11 @@ class getsaleSettingsPage {
     public function getsale_sanitize($input) {
         $new_input = array();
 
-        if (isset($input['getsale_email'])) $new_input['getsale_email'] = $input['getsale_email'];
+        if (isset($input['getsale_email'])) $new_input['getsale_email'] = trim($input['getsale_email']);
 
         if (isset($input['getsale_project_id'])) $new_input['getsale_project_id'] = $input['getsale_project_id'];
 
-        if (isset($input['getsale_api_key'])) $new_input['getsale_api_key'] = $input['getsale_api_key'];
+        if (isset($input['getsale_api_key'])) $new_input['getsale_api_key'] = trim($input['getsale_api_key']);
 
         if (isset($input['getsale_reg_error'])) $new_input['getsale_reg_error'] = $input['getsale_reg_error'];
 
@@ -75,11 +75,11 @@ class getsaleSettingsPage {
     }
 
     public function getsale_email_callback() {
-        printf('<input type="text" id="getsale_email" name="getsale_option_name[getsale_email]" value="%s" title="%s"/>', isset($this->options['getsale_email']) ? esc_attr($this->options['getsale_email']) : '', __('Enter Email', 'getsale-popup-tool'));
+        printf('<input type="text" id="getsale_email" name="getsale_option_name[getsale_email]" value="%s" title="%s"/>', isset($this->options['getsale_email']) ? esc_attr(trim($this->options['getsale_email'])) : '', __('Enter Email', 'getsale-popup-tool'));
     }
 
     public function getsale_api_key_callback() {
-        printf('<input type="text" id="getsale_api_key" name="getsale_option_name[getsale_api_key]" value="%s" title="%s" />', isset($this->options['getsale_api_key']) ? esc_attr($this->options['getsale_api_key']) : '', __('Enter API Key', 'getsale-popup-tool'));
+        printf('<input type="text" id="getsale_api_key" name="getsale_option_name[getsale_api_key]" value="%s" title="%s" />', isset($this->options['getsale_api_key']) ? esc_attr(trim($this->options['getsale_api_key'])) : '', __('Enter API Key', 'getsale-popup-tool'));
     }
 
     public function getsale_reg_error_callback() {
