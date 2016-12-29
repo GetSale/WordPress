@@ -141,3 +141,9 @@ function getsale_script_translate() {
         'path' => plugins_url('ok.png', __FILE__),
     ));
 }
+
+register_uninstall_hook( __FILE__, 'getsale_plugin_uninstall');
+
+function getsale_plugin_uninstall(){
+    delete_option('getsale_option_name');
+}
