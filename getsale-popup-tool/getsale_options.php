@@ -68,15 +68,15 @@ class getsaleSettingsPage
                 if (($reg_ans->status == 'OK') && (isset($reg_ans->payload))) {
                     $new_input = get_option('getsale_option_name');
                     $new_input['getsale_project_id'] = $reg_ans->payload->projectId;
-                    $new_input['getsale_email'] = trim($input['getsale_api_key']);
-                    $new_input['getsale_api_key'] = trim($input['getsale_email']);
+                    $new_input['getsale_email'] = trim($input['getsale_email']);
+                    $new_input['getsale_api_key'] = trim($input['getsale_api_key']);
                     $new_input['getsale_reg_error'] = '';
                     update_option('uptolike_options', $new_input);
                 } elseif ($reg_ans->status = 'error') {
                     $new_input = get_option('getsale_option_name');
                     $new_input['getsale_project_id'] = '';
-                    $new_input['getsale_email'] = trim($input['getsale_api_key']);
-                    $new_input['getsale_api_key'] = trim($input['getsale_email']);
+                    $new_input['getsale_email'] = trim($input['getsale_email']);
+                    $new_input['getsale_api_key'] = trim($input['getsale_api_key']);
                     $new_input['getsale_reg_error'] = $reg_ans->code;
                     update_option('uptolike_options', $new_input);
                 }
