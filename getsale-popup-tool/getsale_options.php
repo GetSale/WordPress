@@ -34,7 +34,7 @@ class getsaleSettingsPage
                     settings_fields('getsale_option_group');
                     do_settings_sections('getsale_settings');
                     ?>
-                    <input type="submit" name="submit">
+                    <input type="submit" name="submit_btn">
                 </form>
             </div>
         </div>
