@@ -3,25 +3,28 @@ Contributors: GetSale Team
 Donate link: https://getsale.io  
 Tags: getsale, popup, popups, pop-up  
 Requires at least: 3.0.1  
-Tested up to: 4.7.2
-Stable tag: 1.0.3
+Tested up to: 4.8
+Stable tag: 1.0.5
 License: GNU General Public License, version 3  
 
 GetSale Popup Tool &mdash; professional tool for creating popup windows.
 
 == Description ==
 
-GetSale will help you build a loyal customer contact base at your site, inform visitors about upcoming promotions, sales, distribute promotional offers, discounts and other things that directly affect the customers’ conversions and sales growth. Beginners can get use of dozens of pre-installed designs and a professional multifunctional designer will implement virtually any design, adjusting it to the different segments of visitors and their actions.
+GetSale will help you build a loyal customer contact base at your site, inform visitors about upcoming promotions, sales, distribute promotional offers, discounts and other things that directly affect the customers’ conversions and sales growth. Beginners can get use of dozens of pre-installed designs and a professional multifunctional designer will implement virtually any design, adjusting it to the different segments of visitors and their actions.
 
-**Easy start:**
+**Easy start:**  
+
 - A set of ready-made designs;  
 - Basic display settings.  
 
-**Professional mode:**
+**Professional mode:**  
+
 - Detailed display scenarios;  
 - Different scenarios of triggering.  
 
-**For creativity:**
+**For creativity:**  
+
 - Vast opportunities in constructing;  
 - Full customization of all elements.  
 
@@ -32,6 +35,7 @@ GetSale will help you build a loyal customer contact base at your site, inform
 - Shows according to the device type.
 
 **Advanced show settings:**
+
 - When opening the page;
 - When trying to close the site;  
 - When clicking the object;  
@@ -40,6 +44,7 @@ GetSale will help you build a loyal customer contact base at your site, inform
 - When pointing to the object.
 
 **Advanced settings:**
+
 - Additional targeting
 - Display only on the specified pages of the site
 - Widget display delay
@@ -52,6 +57,7 @@ GetSale will help you build a loyal customer contact base at your site, inform
 - Display depending on the type of device
 
 **Integration with popular mailing services:**
+
 - MailChimp
 - GetResponse
 - SendPulse
@@ -79,6 +85,13 @@ Answers to Frequently Asked Questions you can find at [http://help.getsale.io](h
 3. Widget settings in https://getsale.io account
 
 == Upgrade Notice ==
+= 1.0.5 =
+ * Improved compatibility with WooCommerce 2.x and later
+
+= 1.0.4 =
+ * Fixed admin page script.
+ * Fixed Readme.txt
+
 = 1.0.3 =
  * Fixed bug when saving data.
 
@@ -88,14 +101,23 @@ Answers to Frequently Asked Questions you can find at [http://help.getsale.io](h
  * Added trimming of email and APIkey fields.
  * Improved compatibility with other plugins.
 
-
 = 1.0.1 =
-* Added translations:
+ * Added translations:
  Russian;
  Português do Brasil;
  Bahasa Indonesia.
 
+= 1.0.0 =
+ * Release
+
 == Changelog ==
+= 1.0.5 =
+ * Improved compatibility with WooCommerce 2.x and later
+
+= 1.0.4 =
+ * Fixed admin page script.
+ * Fixed Readme.txt
+
 = 1.0.3 =
  * Fixed bug when saving data.
 

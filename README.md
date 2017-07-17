@@ -3,8 +3,8 @@ Contributors: GetSale Team
 Donate link: https://getsale.io  
 Tags: getsale, popup, popups, pop-up  
 Requires at least: 3.0.1  
-Tested up to: 4.7.2  
-Stable tag: 1.0.3  
+Tested up to: 4.8  
+Stable tag: 1.0.5  
 License: GNU General Public License, version 3  
 
 GetSale Popup Tool &mdash; professional tool for creating popup windows.
@@ -84,6 +84,13 @@ Answers to Frequently Asked Questions you can find at http://help.getsale.io
 3. Widget settings in https://getsale.io account
 
 ##Changelog
+#1.0.5
+ * Improved compatibility with WooCommerce 2.x and later
+
+#1.0.4
+ * Fixed admin page script.
+ * Fixed Readme.txt
+ 
 #1.0.3
 * Fixed bug when saving data.
 

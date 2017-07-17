@@ -80,7 +80,7 @@ msgstr "Поздравляем! Ваш сайт успешно привязан 
 
 #: ../getsale.php:133
 msgid "You can start creating widgets for your website using your <a href='https://getsale.io'>GetSale account</a>!"
-msgstr "Теперь вы можете создать виджеты в личном кабинете <a href='https://getsale.io'>GetSale</a>!"
+msgstr "Теперь вы можете создать виджеты в личном кабинете на <a href='https://getsale.io'>GetSale</a>!"
 
 #: ../getsale.php:134
 msgid "API Key is correct"
