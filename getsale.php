@@ -28,6 +28,12 @@ add_action('wc_ajax_add_to_cart', 'gtsl_ajax_add_to_cart');
 add_action('woocommerce_before_single_product', 'gtsl_product_view');
 add_action('woocommerce_before_shop_loop', 'gtsl_category_view');
 
+add_action('user_register', 'gtsl_registration', 10, 1);
+
+function gtsl_registration() {
+    setcookie('getsale_reg', true, time() + 3600 * 24 * 100, COOKIEPATH, COOKIE_DOMAIN, false);
+}
+
 function gtsl_submit_order() {
     ?>
     <script type="text/javascript">
@@ -133,6 +139,14 @@ function gtsl_script_cookie() {
         add_action('wp_enqueue_scripts', 'gtsl_scripts_add');
         setcookie('getsale_add', '', time() + 3600 * 24 * 100, COOKIEPATH, COOKIE_DOMAIN, false);
     }
+    if (isset($_COOKIE['getsale_reg'])) {
+        add_action('wp_enqueue_scripts', 'gtsl_scripts_reg');
+        setcookie('getsale_reg', '', time() + 3600 * 24 * 100, COOKIEPATH, COOKIE_DOMAIN, false);
+    }
+
+    if(apply_filters( 'woocommerce_registration_auth_new_customer', true)) {
+        add_action('wp_enqueue_scripts', 'gtsl_scripts_reg');
+    }
 }
 
 function gtsl_scripts_add() {
@@ -140,6 +154,14 @@ function gtsl_scripts_add() {
     if ($options['getsale_project_id'] !== '') {
         wp_register_script('getsale_add', plugins_url('js/add.js', __FILE__), array('jquery'));
         wp_enqueue_script('getsale_add');
+    }
+}
+
+function gtsl_scripts_reg() {
+    $options = get_option('getsale_option_name');
+    if ($options['getsale_project_id'] !== '') {
+        wp_register_script('getsale_reg', plugins_url('js/reg.js', __FILE__), array('jquery'));
+        wp_enqueue_script('getsale_reg');
     }
 }
 
